@@ -1,0 +1,36 @@
+<nav class="nav">
+  <button class="nav__toggle"
+          (click)="hideNavContentsOnMobile = !hideNavContentsOnMobile">=</button>
+  <div class="nav__contents"
+      [ngClass]="{ 'nav__contents--hideOnMobile' : hideNavContentsOnMobile }">
+    <a href="" class="nav__link">First</a>
+
+    <div class="nav__droptrigger nav__link"
+        data-state="closed"
+        (click)="toggleMenuState($event)">
+      Dropdown
+      <div class="nav__dropdown">
+        <a href="" class="nav__link">Link 1</a>
+        <a href="" class="nav__link">Link 2</a>
+        <hr />
+        <a href="" class="nav__link">Link 3</a>
+      </div>
+    </div>
+
+    <a href="" class="nav__link">Second</a>
+    <a href="" class="nav__link">Third</a>
+
+    <div class="nav__droptrigger nav__link"
+          data-state="closed"
+          (click)="toggleMenuState($event)">
+      Dropdown
+      <div class="nav__dropdown">
+        <a href="" class="nav__link">Link 1</a>
+        <a href="" class="nav__link">Link 2</a>
+        <hr />
+        <a href="" class="nav__link">Link 3</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
